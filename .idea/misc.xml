@@ -4,6 +4,8 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/Samsung/AndroidStudioProjects/CarManagement/app/src/main/res/drawable/bg_car_list_item.xml" value="0.21875" />
+        <entry key="..\:/Users/Samsung/AndroidStudioProjects/CarManagement/app/src/main/res/drawable/bg_date_picker_button.xml" value="0.21875" />
+        <entry key="..\:/Users/Samsung/AndroidStudioProjects/CarManagement/app/src/main/res/drawable/bg_date_picker_fragment.xml" value="0.21875" />
         <entry key="..\:/Users/Samsung/AndroidStudioProjects/CarManagement/app/src/main/res/drawable/bg_login_button.xml" value="0.21875" />
         <entry key="..\:/Users/Samsung/AndroidStudioProjects/CarManagement/app/src/main/res/drawable/ic_car.xml" value="0.21875" />
         <entry key="..\:/Users/Samsung/AndroidStudioProjects/CarManagement/app/src/main/res/drawable/ic_email.xml" value="0.21875" />
@@ -11,6 +13,7 @@
         <entry key="..\:/Users/Samsung/AndroidStudioProjects/CarManagement/app/src/main/res/drawable/wave.xml" value="0.21875" />
         <entry key="..\:/Users/Samsung/AndroidStudioProjects/CarManagement/app/src/main/res/layout/activity_main.xml" value="0.20260416666666667" />
         <entry key="..\:/Users/Samsung/AndroidStudioProjects/CarManagement/app/src/main/res/layout/fragment_car_list.xml" value="0.20260416666666667" />
+        <entry key="..\:/Users/Samsung/AndroidStudioProjects/CarManagement/app/src/main/res/layout/fragment_date_pick.xml" value="0.22" />
         <entry key="..\:/Users/Samsung/AndroidStudioProjects/CarManagement/app/src/main/res/layout/fragment_login.xml" value="0.18" />
         <entry key="..\:/Users/Samsung/AndroidStudioProjects/CarManagement/app/src/main/res/layout/item_car_list.xml" value="0.25" />
       </map>

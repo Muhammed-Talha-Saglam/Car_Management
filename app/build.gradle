@@ -13,7 +13,7 @@ android {
 
     defaultConfig {
         applicationId "com.example.carmanagement"
-        minSdk 21
+        minSdk 26
         targetSdk 30
         versionCode 1
         versionName "1.0"
@@ -83,6 +83,11 @@ dependencies {
 
     // DataStore
     implementation "androidx.datastore:datastore-preferences:$dataStoreVersion"
+
+    //Converter components
+    implementation 'org.jetbrains.kotlinx:kotlinx-serialization-json:1.1.0'
+    implementation 'com.google.code.gson:gson:2.8.6'
+
 }
 
 kapt {

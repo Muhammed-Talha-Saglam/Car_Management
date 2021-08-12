@@ -21,7 +21,7 @@ interface CarDao {
     @Query("SELECT * FROM cars")
     fun getAllCars(): Flow<List<Car>>
 
-    @Query("SELECT * FROM cars WHERE isAvailable = 1")
+    @Query("SELECT * FROM cars")
     fun getAvailableCars(): Flow<List<Car>>
 
 
@@ -50,9 +50,9 @@ interface CarDao {
     @Query("SELECT EXISTS(SELECT * FROM users WHERE email = :email AND password = :passWord)")
     suspend fun authUser(email: String, passWord: String) : Boolean
 
-    @Transaction
-    @Query("SELECT * FROM users")
-    fun getUsersAndCars(): Flow<List<UserAndCar>>
+//    @Transaction
+//    @Query("SELECT * FROM users")
+//    fun getUsersAndCars(): Flow<List<UserAndCar>>
 
 
 }

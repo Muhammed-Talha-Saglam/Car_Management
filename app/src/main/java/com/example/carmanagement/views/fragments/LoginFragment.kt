@@ -51,7 +51,7 @@ class LoginFragment : Fragment(R.layout.fragment_login) {
 
     private fun goToCarListPage() {
         val action =
-            com.example.carmanagement.views.fragments.LoginFragmentDirections.actionLoginFragmentToCarListFragment()
+            com.example.carmanagement.views.fragments.LoginFragmentDirections.actionLoginFragmentToDatePickFragment()
         findNavController().navigate(action)
     }
 

@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
     app:startDestination="@id/loginFragment">
 
@@ -8,9 +9,10 @@
         android:id="@+id/loginFragment"
         android:name="com.example.carmanagement.views.fragments.LoginFragment"
         android:label="LoginFragment" >
+
         <action
-            android:id="@+id/action_loginFragment_to_carListFragment"
-            app:destination="@id/carListFragment" />
+            android:id="@+id/action_loginFragment_to_datePickFragment"
+            app:destination="@id/datePickFragment" />
     </fragment>
     <fragment
         android:id="@+id/carListFragment"
@@ -19,5 +21,14 @@
         <action
             android:id="@+id/action_carListFragment_to_loginFragment"
             app:destination="@id/loginFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/datePickFragment"
+        android:name="com.example.carmanagement.views.fragments.DatePickFragment"
+        android:label="fragment_date_pick"
+        tools:layout="@layout/fragment_date_pick" >
+        <action
+            android:id="@+id/action_datePickFragment_to_carListFragment"
+            app:destination="@id/carListFragment" />
     </fragment>
 </navigation>
