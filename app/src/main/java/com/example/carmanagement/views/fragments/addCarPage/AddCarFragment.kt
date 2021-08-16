@@ -13,7 +13,7 @@ import dagger.hilt.android.AndroidEntryPoint
 @AndroidEntryPoint
 class AddCarFragment : Fragment(R.layout.fragment_add_car) {
 
-    private val  addVarViewModel: AddCarViewModel by viewModels()
+    private val addVarViewModel: AddCarViewModel by viewModels()
     lateinit var binding: FragmentAddCarBinding
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -38,12 +38,19 @@ class AddCarFragment : Fragment(R.layout.fragment_add_car) {
     private fun saveCar() {
         val brand = binding.editTextBrand.text.toString().trim()
         val plate = binding.editTextPlate.text.toString().trim()
-        addVarViewModel.addNewCar(brand,plate)
-        Toast.makeText(requireContext(),"New car has been added successfully", Toast.LENGTH_LONG).show()
-        goToCarListPage()
+
+        if (brand.isNotBlank() && plate.isNotBlank()) {
+            addVarViewModel.addNewCar(brand, plate)
+
+            Toast.makeText(
+                requireContext(),
+                getString(R.string.new_car_added),
+                Toast.LENGTH_LONG
+            ).show()
+
+            goToCarListPage()
+        }
     }
-
-
 
 
 }

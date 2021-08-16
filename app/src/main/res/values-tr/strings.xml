@@ -27,6 +27,10 @@
     <string name="click_to_reserve"><u>Rezervasyon için tıklayın.</u></string>
     <string name="add_car">Araç Ekle</string>
     <string name="clear_history">Geçmişi Temizle</string>
-    <style name="data_invalid">Tarih Geçerli Değil!</style>
+    <string name="date_invalid">Tarih Geçerli Değil!</string>
+    <string name="login_successful">Giriş Başarılı!</string>
+    <string name="login_fail">Giriş Başarısız!</string>
+    <string name="new_car_added">Yeni araç başarıyla eklendi!</string>
+    <string name="all_cars">Araçlar</string>
 
 </resources>

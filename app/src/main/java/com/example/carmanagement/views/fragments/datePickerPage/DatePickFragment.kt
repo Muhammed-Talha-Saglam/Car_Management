@@ -179,10 +179,11 @@ class DatePickFragment : Fragment(R.layout.fragment_date_pick) {
             endDate
         )
 
+
         if (isDateValid())
             findNavController().navigate(action)
         else
-            Toast.makeText(requireContext(),"Date is invalid",Toast.LENGTH_LONG).show()
+            Toast.makeText(requireContext(),getString(R.string.date_invalid),Toast.LENGTH_LONG).show()
     }
 
     private fun isDateValid(): Boolean {

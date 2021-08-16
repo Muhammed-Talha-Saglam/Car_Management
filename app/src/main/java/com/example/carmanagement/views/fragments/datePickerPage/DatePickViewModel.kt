@@ -11,6 +11,8 @@ class DatePickViewModel : ViewModel() {
     val startLocalDateTime = MutableLiveData<LocalDateTime>()
     val endLocalDateTime = MutableLiveData<LocalDateTime>()
 
+    
+
     fun setStartDate(year: Int, month: Int, day: Int) {
         startLocalDateTime.value = startLocalDateTime.value?.copyWithHour(year, month, day)
     }

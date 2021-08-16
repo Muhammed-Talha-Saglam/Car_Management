@@ -11,6 +11,7 @@
         <entry key="..\:/Users/Samsung/AndroidStudioProjects/CarManagement/app/src/main/res/drawable/bg_car_pic.xml" value="0.21875" />
         <entry key="..\:/Users/Samsung/AndroidStudioProjects/CarManagement/app/src/main/res/drawable/bg_date_picker_button.xml" value="0.21875" />
         <entry key="..\:/Users/Samsung/AndroidStudioProjects/CarManagement/app/src/main/res/drawable/bg_date_picker_fragment.xml" value="0.21875" />
+        <entry key="..\:/Users/Samsung/AndroidStudioProjects/CarManagement/app/src/main/res/drawable/bg_icon.xml" value="0.1935185185185185" />
         <entry key="..\:/Users/Samsung/AndroidStudioProjects/CarManagement/app/src/main/res/drawable/bg_login_button.xml" value="0.21875" />
         <entry key="..\:/Users/Samsung/AndroidStudioProjects/CarManagement/app/src/main/res/drawable/bg_text_input.xml" value="0.21875" />
         <entry key="..\:/Users/Samsung/AndroidStudioProjects/CarManagement/app/src/main/res/drawable/bg_tool_bar.xml" value="0.2037037037037037" />
@@ -23,13 +24,14 @@
         <entry key="..\:/Users/Samsung/AndroidStudioProjects/CarManagement/app/src/main/res/drawable/ic_lock.xml" value="0.17314814814814813" />
         <entry key="..\:/Users/Samsung/AndroidStudioProjects/CarManagement/app/src/main/res/drawable/ic_logout.xml" value="0.21875" />
         <entry key="..\:/Users/Samsung/AndroidStudioProjects/CarManagement/app/src/main/res/drawable/ic_time.xml" value="0.19537037037037036" />
+        <entry key="..\:/Users/Samsung/AndroidStudioProjects/CarManagement/app/src/main/res/drawable/transparent_circle.xml" value="0.1935185185185185" />
         <entry key="..\:/Users/Samsung/AndroidStudioProjects/CarManagement/app/src/main/res/drawable/wave.xml" value="0.21875" />
         <entry key="..\:/Users/Samsung/AndroidStudioProjects/CarManagement/app/src/main/res/layout/activity_main.xml" value="0.20260416666666667" />
         <entry key="..\:/Users/Samsung/AndroidStudioProjects/CarManagement/app/src/main/res/layout/fragment_add_car.xml" value="0.22" />
-        <entry key="..\:/Users/Samsung/AndroidStudioProjects/CarManagement/app/src/main/res/layout/fragment_car_list.xml" value="0.22" />
+        <entry key="..\:/Users/Samsung/AndroidStudioProjects/CarManagement/app/src/main/res/layout/fragment_car_list.xml" value="0.30185185185185187" />
         <entry key="..\:/Users/Samsung/AndroidStudioProjects/CarManagement/app/src/main/res/layout/fragment_date_pick.xml" value="0.22" />
         <entry key="..\:/Users/Samsung/AndroidStudioProjects/CarManagement/app/src/main/res/layout/fragment_login.xml" value="0.25" />
-        <entry key="..\:/Users/Samsung/AndroidStudioProjects/CarManagement/app/src/main/res/layout/fragment_user_history.xml" value="0.25" />
+        <entry key="..\:/Users/Samsung/AndroidStudioProjects/CarManagement/app/src/main/res/layout/fragment_user_history.xml" value="0.30185185185185187" />
         <entry key="..\:/Users/Samsung/AndroidStudioProjects/CarManagement/app/src/main/res/layout/item_car_list.xml" value="0.25" />
         <entry key="..\:/Users/Samsung/AndroidStudioProjects/CarManagement/app/src/main/res/layout/item_user_history.xml" value="0.25" />
         <entry key="..\:/Users/Samsung/AndroidStudioProjects/CarManagement/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.21875" />

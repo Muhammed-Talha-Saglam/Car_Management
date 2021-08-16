@@ -6,6 +6,7 @@ import androidx.hilt.lifecycle.ViewModelInject
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import com.example.carmanagement.R
 import com.example.carmanagement.model.User
 import com.example.carmanagement.model.database.CarDao
 import kotlinx.coroutines.launch
@@ -28,10 +29,10 @@ class LoginViewModel @ViewModelInject constructor(
             val shouldLogIn = carDao.authUser(email, passWord)
 
             if (!shouldLogIn) {
-                Toast.makeText(context, "Login is unsuccessful", Toast.LENGTH_LONG).show()
+                Toast.makeText(context, context.getString(R.string.login_fail), Toast.LENGTH_LONG).show()
             } else {
                 val user = carDao.getUser(email, passWord)
-                Toast.makeText(context, "Login is successful", Toast.LENGTH_LONG).show()
+                Toast.makeText(context, context.getString(R.string.login_successful), Toast.LENGTH_LONG).show()
 
                 currentUser.value = user
                 isLoggedIn.value = true

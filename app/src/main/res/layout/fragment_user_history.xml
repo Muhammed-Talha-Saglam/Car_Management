@@ -26,17 +26,18 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/margin_medium"
         android:src="@drawable/ic_arrow_back"
+        android:background="@drawable/bg_icon"
         app:layout_constraintBottom_toBottomOf="@+id/tool_bar_user_history"
         app:layout_constraintStart_toStartOf="@+id/tool_bar_user_history"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="@id/tool_bar_user_history" />
 
     <TextView
         android:id="@+id/title"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
         android:text="@string/reservation_history"
+        android:layout_marginStart="@dimen/margin_medium"
         android:gravity="center"
-        android:layout_marginVertical="@dimen/margin_medium"
         style="@style/Widget.App.Text.Title"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="@id/tool_bar_user_history"

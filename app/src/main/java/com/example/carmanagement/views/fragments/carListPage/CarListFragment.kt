@@ -73,9 +73,11 @@ class CarListFragment : Fragment(R.layout.fragment_car_list), CarsAdapter.OnItem
             if (userType == UserType.STANDART) {
                 binding.addCarButton.visibility = View.GONE
             }
-            //Admin doesn't have a reservation history.
+            // Admin doesn't have a reservation history.
+            // Admin can see all the cars in the database.
             else if (userType == UserType.ADMIN) {
                 binding.userHistoryButton.visibility = View.GONE
+                binding.title.text = getString(R.string.all_cars)
             }
 
         }

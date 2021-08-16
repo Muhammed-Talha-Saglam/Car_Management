@@ -13,9 +13,12 @@ fun LocalDateTime.copyWithHour(year: Int, month: Int, day: Int) : LocalDateTime 
 }
 
 fun LocalDateTime.toStringDate(): String {
-    val day = this.dayOfMonth
+    var day = this.dayOfMonth.toString()
     val month = getMonthFormat(this.monthValue)
     val year = this.year
+
+    if (day.length == 1)
+        day = "0$day"
 
     return "$day / $month / $year"
 
@@ -32,8 +35,6 @@ fun LocalDateTime.toStringTime(): String {
         hour = "0$hour"
 
     return "$hour : $minute"
-
-
 }
 
 private fun getMonthFormat(month: Int): String {
