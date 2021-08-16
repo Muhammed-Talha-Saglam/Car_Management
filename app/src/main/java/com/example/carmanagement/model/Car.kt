@@ -12,7 +12,5 @@ data class Car(
 
     val brand: String,
     val plate: String,
-    val reservations: MutableList<Reservation> = mutableListOf()
-
 
 )

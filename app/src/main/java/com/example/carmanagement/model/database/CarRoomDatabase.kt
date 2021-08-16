@@ -5,10 +5,7 @@ import androidx.room.RoomDatabase
 import androidx.room.TypeConverters
 import androidx.sqlite.db.SupportSQLiteDatabase
 import com.example.carmanagement.di.ApplicationScope
-import com.example.carmanagement.model.Car
-import com.example.carmanagement.model.Reservation
-import com.example.carmanagement.model.User
-import com.example.carmanagement.model.UserType
+import com.example.carmanagement.model.*
 import com.example.carmanagement.model.database.converters.Converters
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.launch
@@ -16,7 +13,7 @@ import javax.inject.Inject
 import javax.inject.Provider
 
 
-@Database(entities = [Car::class, User::class, Reservation::class], version = 9, exportSchema = false)
+@Database(entities = [Car::class, User::class, Reservation::class, UserHistory::class], version = 1, exportSchema = false)
 @TypeConverters(Converters::class)
 abstract class CarRoomDatabase : RoomDatabase() {
 
@@ -28,6 +25,11 @@ abstract class CarRoomDatabase : RoomDatabase() {
         @ApplicationScope private val applicationScope: CoroutineScope
     ) : RoomDatabase.Callback() {
 
+
+        /*
+        When database is created first time,
+        we populate it with some User and Car entities
+         */
         override fun onCreate(db: SupportSQLiteDatabase) {
             super.onCreate(db)
 

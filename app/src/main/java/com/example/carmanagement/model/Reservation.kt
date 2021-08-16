@@ -13,4 +13,6 @@ data class Reservation(
 
     val start: LocalDateTime,
     val end: LocalDateTime,
+    val carOwnerId: Int
+
 )

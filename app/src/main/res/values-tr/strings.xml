@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Car Management</string>
+    <!-- Strings related to login -->
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Şifre</string>
+    <!--Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="login">GİRİŞ YAP</string>
+    <string name="brand">Marka:</string>
+    <string name="plate">Plaka:</string>
+    <string name="available_cars">Uygun Araçlar</string>
+    <string name="filter">FİLTRELE</string>
+    <string name="start_date">Başlangıç Tarihi</string>
+    <string name="start_time">Başlangıç Saati</string>
+    <string name="end_date">Bitiş Tarihi</string>
+    <string name="end_time">Bitiş Saati</string>
+    <string name="save">KAYDET</string>
+    <string name="cancel">İPTAL ET</string>
+    <string name="yes">EVET</string>
+    <string name="no">HAYIR</string>
+    <string name="alert_message">EMİN MİSİNİZ?</string>
+    <string name="msg_car_added">Yeni araba başarıyla eklendi</string>
+    <string name="password">Şifre</string>
+    <string name="required">Zorunlu</string>
+    <string name="reservation_history">Rezervasyon Geçmişi</string>
+    <string name="click_to_reserve"><u>Rezervasyon için tıklayın.</u></string>
+    <string name="add_car">Araç Ekle</string>
+    <string name="clear_history">Geçmişi Temizle</string>
+    <style name="data_invalid">Tarih Geçerli Değil!</style>
+
+</resources>

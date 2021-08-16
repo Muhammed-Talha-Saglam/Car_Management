@@ -3,21 +3,28 @@
     <!-- Strings related to login -->
     <string name="prompt_email">Email</string>
     <string name="prompt_password">Password</string>
-    <string name="action_sign_in">Sign in or register</string>
-    <string name="action_sign_in_short">Sign in</string>
-    <string name="welcome">"Welcome!"</string>
-    <string name="invalid_username">Not a valid username</string>
-    <string name="invalid_password">Password must be >5 characters</string>
-    <string name="login_failed">"Login failed"</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="login">LOGIN</string>
     <string name="brand">Brand:</string>
     <string name="plate">Plate:</string>
-    <string name="available_cars">Available cars</string>
-    <string name="start_date">start date</string>
+    <string name="available_cars">Available Cars</string>
+    <string name="start_date">Start Date</string>
     <string name="filter">FILTER</string>
-    <string name="start_time">start time</string>
-    <string name="end_data">end date</string>
-    <string name="end_time">end time</string>
+    <string name="start_time">Start Time</string>
+    <string name="end_date">End Date</string>
+    <string name="end_time">End Time</string>
+    <string name="save">SAVE</string>
+    <string name="cancel">CANCEL</string>
+    <string name="yes">YES</string>
+    <string name="no">NO</string>
+    <string name="alert_message">Are you sure?</string>
+    <string name="msg_car_added">New car has been added successfully</string>
+    <string name="password">Password</string>
+    <string name="required">Required</string>
+    <string name="reservation_history">Reservation History</string>
+    <string name="click_to_reserve"><u>Click to reserve</u></string>
+    <string name="add_car">Add car</string>
+    <string name="clear_history">Clear History</string>
+    <style name="data_invalid">Date is invalid</style>
 </resources>

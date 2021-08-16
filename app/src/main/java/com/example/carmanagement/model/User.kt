@@ -1,7 +1,9 @@
 package com.example.carmanagement.model
 
+import android.os.Parcelable
 import androidx.room.Entity
 import androidx.room.PrimaryKey
+import kotlinx.android.parcel.Parcelize
 
 
 enum class UserType {
@@ -11,6 +13,7 @@ enum class UserType {
 
 
 @Entity(tableName = "users")
+@Parcelize
 data class User(
 
     @PrimaryKey(autoGenerate = true)
@@ -19,8 +22,6 @@ data class User(
     val userType: UserType,
     val email: String,
     val password: String
-
-
-)
+): Parcelable
 
 

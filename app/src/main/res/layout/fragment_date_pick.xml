@@ -5,46 +5,62 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/bg_date_picker_fragment"
-    tools:context=".views.fragments.DatePickFragment">
+    tools:context=".views.fragments.datePickerPage.DatePickFragment">
+
+
+    <View
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:translationX="-50dp"
+        android:translationY="-75dp"
+        android:background="@drawable/transparent_circle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+    <View
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:translationX="75dp"
+        android:translationY="-80dp"
+        android:background="@drawable/transparent_circle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
 
     <TextView
         android:id="@+id/text_start_date"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="50dp"
-        android:gravity="center"
+        android:gravity="left"
         android:text="@string/start_date"
-        android:textStyle="bold"
-        android:textColor="@color/colorPrimaryDark"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        android:textAppearance="@style/Widget.App.TextAppearance.StartDate"
+        app:layout_constraintEnd_toEndOf="@+id/button_start_date"
+        app:layout_constraintStart_toStartOf="@+id/button_start_date"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/button_start_date"
         android:layout_width="250dp"
         android:layout_height="wrap_content"
-        android:text="12 Aug 2021"
-        android:textColor="@color/black"
+        style="@style/Widget.App.Button.DatePickerButton"
         android:gravity="center"
-        style="?android:spinnerStyle"
-        android:layout_marginTop="10dp"
-        app:layout_constraintTop_toBottomOf="@id/text_start_date"
-        app:layout_constraintStart_toStartOf="parent"
+        android:text="12 Aug 2021"
         app:layout_constraintEnd_toEndOf="parent"
-        />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/text_start_date" />
 
     <TextView
         android:id="@+id/text_start_time"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_margin="16dp"
-        android:gravity="center"
+        style="@style/Widget.App.TextAppearance.StartDate"
+        android:layout_marginTop="@dimen/margin_medium"
+        android:gravity="left"
         android:text="@string/start_time"
-        android:textStyle="bold"
-        android:textColor="@color/colorPrimaryDark"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/button_start_time"
+        app:layout_constraintStart_toStartOf="@+id/button_start_time"
         app:layout_constraintTop_toBottomOf="@id/button_start_date" />
 
 
@@ -54,8 +70,7 @@
         android:layout_height="wrap_content"
         android:gravity="center"
         android:text="12:00"
-        android:textColor="@color/black"
-        style="?android:spinnerStyle"
+        style="@style/Widget.App.Button.TimePickerButton"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/text_start_time"
@@ -64,15 +79,14 @@
 
     <TextView
         android:id="@+id/text_end_date"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
+        style="@style/Widget.App.TextAppearance.EndDate"
         android:layout_marginTop="50dp"
-        android:gravity="center"
-        android:text="@string/end_data"
-        android:textStyle="bold"
-        android:textColor="@color/colorAccent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        android:gravity="left"
+        android:text="@string/end_date"
+        app:layout_constraintEnd_toEndOf="@+id/button_end_date"
+        app:layout_constraintStart_toStartOf="@+id/button_end_date"
         app:layout_constraintTop_toBottomOf="@id/button_start_time" />
 
     <Button
@@ -80,10 +94,8 @@
         android:layout_width="250dp"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:textColor="@color/black"
-        style="?android:spinnerStyle"
+        style="@style/Widget.App.Button.DatePickerButton"
         android:text="12 Aug 2021"
-        android:layout_marginTop="10dp"
         app:layout_constraintTop_toBottomOf="@id/text_end_date"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -91,17 +103,15 @@
 
     <TextView
         android:id="@+id/text_end_time"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
+        style="@style/Widget.App.TextAppearance.EndDate"
+        android:layout_marginTop="@dimen/margin_medium"
+        android:gravity="left"
         android:text="@string/end_time"
-        android:layout_margin="16dp"
-        android:gravity="center"
-        android:textColor="@color/colorAccent"
-        android:textStyle="bold"
-        app:layout_constraintTop_toBottomOf="@id/button_end_date"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        />
+        app:layout_constraintEnd_toEndOf="@+id/button_end_time"
+        app:layout_constraintStart_toStartOf="@+id/button_end_time"
+        app:layout_constraintTop_toBottomOf="@id/button_end_date" />
 
 
     <Button
@@ -110,8 +120,7 @@
         android:layout_height="wrap_content"
         android:gravity="center"
         android:text="12:00"
-        android:textColor="@color/black"
-        style="?android:spinnerStyle"
+        style="@style/Widget.App.Button.TimePickerButton"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/text_end_time"
@@ -126,7 +135,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginBottom="25dp"
         android:text="@string/filter"
+        style="@style/Widget.App.Button"
+        android:backgroundTint="@color/green"
         />
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,8 +1,7 @@
 package com.example.carmanagement.model.database
 
 import androidx.room.*
-import com.example.carmanagement.model.Car
-import com.example.carmanagement.model.User
+import com.example.carmanagement.model.*
 import kotlinx.coroutines.flow.Flow
 
 @Dao
@@ -21,13 +20,23 @@ interface CarDao {
     @Query("SELECT * FROM cars")
     fun getAllCars(): Flow<List<Car>>
 
-    @Query("SELECT * FROM cars")
-    fun getAvailableCars(): Flow<List<Car>>
+    @Query("SELECT * FROM cars WHERE carId not in (:ids)")
+    suspend fun getAvailableCars(ids: Set<Int>): List<Car>
 
 
     @Query("SELECT * FROM cars WHERE carId = :carId ")
     fun getCar(carId: String): Flow<Car>
 
+
+    //Handle Reservation Entity
+    @Insert
+    suspend fun insertReservation(reservation: Reservation)
+
+    @Delete
+    suspend fun deleteReservation(reservation: Reservation)
+
+    @Query("SELECT * FROM reservations")
+    fun getAllReservations(): Flow<List<Reservation>>
 
 
     // Handle User entity
@@ -50,9 +59,25 @@ interface CarDao {
     @Query("SELECT EXISTS(SELECT * FROM users WHERE email = :email AND password = :passWord)")
     suspend fun authUser(email: String, passWord: String) : Boolean
 
-//    @Transaction
-//    @Query("SELECT * FROM users")
-//    fun getUsersAndCars(): Flow<List<UserAndCar>>
+
+    //Handle UserHistory Entity
+    @Insert
+    suspend fun insertUserHistory(userHistory: UserHistory)
+
+    @Query("SELECT * FROM userHistory WHERE userOwnerId = :userOwnerId")
+    suspend fun getUserHistoryById(userOwnerId: Int) : List<UserHistory>
+
+    @Query("Delete FROM userHistory WHERE userOwnerId = :userOwnerId")
+    suspend fun clearUserHistoryByUserId(userOwnerId: Int)
+
+    // One to many queries
+    @Transaction
+    @Query("SELECT * FROM cars")
+    suspend fun getCarsWithReservations(): List<CarWithReservations>
+
+    @Transaction
+    @Query("SELECT * FROM users")
+    suspend fun getUsersWithUserHistories(): List<UserWithUserHistories>
 
 
 }

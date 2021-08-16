@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    android:paddingBottom="@dimen/margin_small"
+    android:background="@drawable/bg_car_list_item"
+    >
+
+
+    <View
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:translationX="20dp"
+        android:translationY="-40dp"
+        android:background="@drawable/transparent_circle"
+        android:layout_below="@id/car_pic"
+        android:layout_alignParentEnd="true"
+        />
+
+
+    <View
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@id/car_pic"
+        android:background="@drawable/transparent_circle"
+        android:translationX="45dp"
+        android:translationY="0dp" />
+
+    <ImageView
+        android:id="@+id/car_pic"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scaleType="centerCrop"
+        android:src="@drawable/car" />
+
+
+    <TextView
+        android:id="@+id/label_brand"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="@string/brand"
+        android:layout_below="@id/car_pic"
+        style="@style/Widget.App.Text.Label"
+        />
+
+    <TextView
+        android:id="@+id/car_brand"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="brand"
+        android:layout_below="@id/car_pic"
+        android:layout_alignBaseline="@id/label_brand"
+        android:layout_toRightOf="@id/label_brand"
+        style="@style/Widget.App.Text"
+        />
+
+
+    <TextView
+        android:id="@+id/label_plate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="@string/plate"
+        android:layout_below="@id/label_brand"
+        style="@style/Widget.App.Text.Label"
+        />
+
+    <TextView
+        android:id="@+id/car_plate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="plate"
+        android:layout_alignBaseline="@id/label_plate"
+        android:layout_below="@id/car_brand"
+        android:layout_toRightOf="@id/label_plate"
+        style="@style/Widget.App.Text"
+
+        />
+
+
+
+    <TextView
+        android:id="@+id/label_start_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="@string/start_date"
+        android:layout_below="@id/label_plate"
+        style="@style/Widget.App.Text.Label"
+        />
+
+    <TextView
+        android:id="@+id/start_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="start date"
+        android:layout_below="@id/car_plate"
+        android:layout_alignBaseline="@id/label_start_date"
+        android:layout_toRightOf="@id/label_start_date"
+        style="@style/Widget.App.Text"
+
+        />
+
+
+    <TextView
+        android:id="@+id/label_end_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="@string/end_date"
+        android:layout_below="@id/label_start_date"
+        style="@style/Widget.App.Text.Label"
+        />
+
+    <TextView
+        android:id="@+id/end_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="end date"
+        android:layout_alignBaseline="@id/label_end_date"
+        android:layout_below="@id/label_start_date"
+        android:layout_toRightOf="@id/label_end_date"
+        style="@style/Widget.App.Text"
+        />
+
+
+
+</RelativeLayout>

@@ -1,53 +1,108 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_margin="8dp"
-    android:padding="8dp"
-    android:background="@drawable/bg_car_list_item"
-    android:gravity="bottom"
-    >
 
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/ic_car"
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="250dp"
+    android:layout_margin="8dp"
+    android:background="@drawable/bg_car_list_item">
+
+    <View
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:translationX="20dp"
+        android:translationY="-40dp"
+        android:background="@drawable/transparent_circle"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
         />
 
+    <View
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/transparent_circle"
+        android:translationX="5dp"
+        android:translationY="-70dp" />
+
+    <ImageView
+        android:id="@+id/car_pic"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:scaleType="centerCrop"
+        android:src="@drawable/car" />
 
     <TextView
+        android:id="@+id/label_brand"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/brand"
-        android:textColor="@color/colorAccent"
+        android:layout_below="@id/car_pic"
         android:layout_marginStart="8dp"
+        android:text="@string/brand"
+        style="@style/Widget.App.Text.Label"
         />
 
     <TextView
         android:id="@+id/car_brand"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="brand"
-        android:textColor="@color/black"
+        android:layout_below="@id/car_pic"
         android:layout_marginStart="8dp"
+        android:layout_toRightOf="@id/label_brand"
+        android:text="brand"
+        android:layout_alignBaseline="@id/label_brand"
+        style="@style/Widget.App.Text"
         />
 
 
     <TextView
+        android:id="@+id/label_plate"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/plate"
-        android:textColor="@color/colorAccent"
+        android:layout_below="@id/label_brand"
         android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/plate"
+        style="@style/Widget.App.Text.Label"
         />
 
     <TextView
         android:id="@+id/car_plate"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_below="@id/car_brand"
+        android:layout_alignBaseline="@id/label_plate"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_toRightOf="@id/label_plate"
         android:text="plate"
-        android:textColor="@color/black"
-        android:layout_marginStart="8dp" />
+        style="@style/Widget.App.Text"
 
-</LinearLayout>
+        />
+
+    <TextView
+        android:id="@+id/text_click_to_reserve"
+        style="@style/Widget.App.Text.Title"
+        android:textSize="20sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="8dp"
+        android:gravity="center"
+        android:text="@string/click_to_reserve" />
+
+    <View
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:translationX="-10dp"
+        android:translationY="10dp"
+        android:background="@drawable/transparent_circle"
+        android:layout_alignParentBottom="true"
+        />
+
+
+
+</RelativeLayout>
