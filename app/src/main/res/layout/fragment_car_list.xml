@@ -38,7 +38,7 @@
         android:id="@+id/title"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        style="@style/Widget.App.Text.Title"
+        android:textAppearance="@style/TextAppearance.App.HeadLine6"
         android:gravity="center"
         android:text="@string/available_cars"
         app:layout_constraintBottom_toBottomOf="@id/tool_bar_car_list"

@@ -29,7 +29,6 @@ object AppModule {
     fun provideCarDao(db: CarRoomDatabase) = db.carDao()
 
 
-
     @ApplicationScope
     @Provides
     @Singleton

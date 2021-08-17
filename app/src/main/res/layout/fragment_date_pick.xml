@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/bg_date_picker_fragment"
+    android:background="@color/black"
     tools:context=".views.fragments.datePickerPage.DatePickFragment">
 
 
@@ -35,7 +35,7 @@
         android:layout_marginTop="50dp"
         android:gravity="left"
         android:text="@string/start_date"
-        android:textAppearance="@style/Widget.App.TextAppearance.StartDate"
+        android:textAppearance="@style/TextAppearance.App.Text.StartDate"
         app:layout_constraintEnd_toEndOf="@+id/button_start_date"
         app:layout_constraintStart_toStartOf="@+id/button_start_date"
         app:layout_constraintTop_toTopOf="parent" />
@@ -55,7 +55,7 @@
         android:id="@+id/text_start_time"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        style="@style/Widget.App.TextAppearance.StartDate"
+        style="@style/TextAppearance.App.Text.StartDate"
         android:layout_marginTop="@dimen/margin_medium"
         android:gravity="left"
         android:text="@string/start_time"
@@ -81,7 +81,7 @@
         android:id="@+id/text_end_date"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        style="@style/Widget.App.TextAppearance.EndDate"
+        style="@style/TextAppearance.App.Text.EndDate"
         android:layout_marginTop="50dp"
         android:gravity="left"
         android:text="@string/end_date"
@@ -105,7 +105,7 @@
         android:id="@+id/text_end_time"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        style="@style/Widget.App.TextAppearance.EndDate"
+        style="@style/TextAppearance.App.Text.EndDate"
         android:layout_marginTop="@dimen/margin_medium"
         android:gravity="left"
         android:text="@string/end_time"
@@ -136,6 +136,8 @@
         android:layout_marginBottom="25dp"
         android:text="@string/filter"
         style="@style/Widget.App.Button"
+        android:textColor="@color/black"
+        android:textStyle="bold"
         android:backgroundTint="@color/green"
         />
 

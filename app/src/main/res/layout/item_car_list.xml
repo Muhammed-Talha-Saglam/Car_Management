@@ -42,7 +42,7 @@
         android:layout_below="@id/car_pic"
         android:layout_marginStart="8dp"
         android:text="@string/brand"
-        style="@style/Widget.App.Text.Label"
+        style="@style/TextAppearance.App.Text.Label"
         />
 
     <TextView
@@ -54,7 +54,7 @@
         android:layout_toRightOf="@id/label_brand"
         android:text="brand"
         android:layout_alignBaseline="@id/label_brand"
-        style="@style/Widget.App.Text"
+        style="@style/TextAppearance.App.Body1"
         />
 
 
@@ -66,7 +66,7 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:text="@string/plate"
-        style="@style/Widget.App.Text.Label"
+        style="@style/TextAppearance.App.Text.Label"
         />
 
     <TextView
@@ -79,13 +79,13 @@
         android:layout_marginTop="8dp"
         android:layout_toRightOf="@id/label_plate"
         android:text="plate"
-        style="@style/Widget.App.Text"
+        style="@style/TextAppearance.App.Body1"
 
         />
 
     <TextView
         android:id="@+id/text_click_to_reserve"
-        style="@style/Widget.App.Text.Title"
+        style="@style/TextAppearance.App.HeadLine6"
         android:textSize="20sp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

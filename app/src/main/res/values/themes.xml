@@ -15,7 +15,10 @@
         <!-- Status bar color. -->
         <item name="android:statusBarColor" tools:targetApi="l">@color/colorPrimary</item>
         <!-- Customize your theme here. -->
+        <item name="textAppearanceHeadline6">@style/TextAppearance.App.HeadLine6</item>
+        <item name="textAppearanceBody1">@style/TextAppearance.App.Body1</item>
     </style>
+
 
     // Button Theme
     <style name="Widget.App.Button" parent="Widget.MaterialComponents.Button">
@@ -32,14 +35,14 @@
 
     // Time Picker
     <style name="Widget.App.Button.TimePickerButton" parent="Widget.MaterialComponents.Button.OutlinedButton">
-        <item name="android:backgroundTint">@color/black</item>
-        <item name="android:textColor">@color/white</item>
+        <item name="android:backgroundTint">@color/white</item>
+        <item name="android:textColor">@color/black</item>
         <item name="android:drawableRight">@drawable/ic_time</item>
     </style>
 
 
     // Text
-    <style name="Widget.App.Text" parent="TextAppearance.AppCompat.Title">
+    <style name="TextAppearance.App.Body1" parent="TextAppearance.MaterialComponents.Body1">
         <item name="android:textColor">@color/white</item>
         <item name="android:textSize">15sp</item>
     </style>
@@ -52,14 +55,14 @@
     </style>
 
     // Start Date Text Appearance
-    <style name="Widget.App.TextAppearance.StartDate" parent="TextAppearance.AppCompat">
+    <style name="TextAppearance.App.Text.StartDate" parent="TextAppearance.AppCompat">
         <item name="android:textColor">@color/green</item>
         <item name="android:textSize">20sp</item>
         <item name="android:textStyle">bold</item>
     </style>
 
     // End Date Text Appearance
-    <style name="Widget.App.TextAppearance.EndDate" parent="TextAppearance.AppCompat">
+    <style name="TextAppearance.App.Text.EndDate" parent="TextAppearance.AppCompat">
         <item name="android:textColor">@color/red</item>
         <item name="android:textSize">20sp</item>
         <item name="android:textStyle">bold</item>
@@ -67,7 +70,7 @@
 
 
     // Title
-    <style name="Widget.App.Text.Title" parent="TextAppearance.AppCompat.Title">
+    <style name="TextAppearance.App.HeadLine6" parent="TextAppearance.MaterialComponents.Headline6">
         <item name="android:textColor">@color/white</item>
         <item name="android:textSize">25sp</item>
         <item name="android:textStyle">bold</item>
@@ -75,18 +78,20 @@
 
 
     // Label
-    <style name="Widget.App.Text.Label" parent="TextAppearance.AppCompat.Title">
+    <style name="TextAppearance.App.Text.Label" parent="TextAppearance.AppCompat.Title">
         <item name="android:textColor">@color/red</item>
         <item name="android:textSize">18sp</item>
         <item name="android:textStyle">bold</item>
     </style>
 
     // Bottom nav bar text
-    <style name="Widget.App.Text.NavBar" parent="TextAppearance.AppCompat.Title">
+    <style name="TextAppearance.App.Text.NavBar" parent="TextAppearance.AppCompat.Title">
         <item name="android:textColor">@color/white</item>
         <item name="android:textSize">18sp</item>
         <item name="android:textStyle">bold</item>
     </style>
+
+
 
 
 </resources>

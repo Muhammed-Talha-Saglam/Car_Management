@@ -45,7 +45,7 @@
         android:layout_marginStart="8dp"
         android:text="@string/brand"
         android:layout_below="@id/car_pic"
-        style="@style/Widget.App.Text.Label"
+        style="@style/TextAppearance.App.Text.Label"
         />
 
     <TextView
@@ -57,7 +57,7 @@
         android:layout_below="@id/car_pic"
         android:layout_alignBaseline="@id/label_brand"
         android:layout_toRightOf="@id/label_brand"
-        style="@style/Widget.App.Text"
+        style="@style/TextAppearance.App.Body1"
         />
 
 
@@ -68,7 +68,7 @@
         android:layout_marginStart="8dp"
         android:text="@string/plate"
         android:layout_below="@id/label_brand"
-        style="@style/Widget.App.Text.Label"
+        style="@style/TextAppearance.App.Text.Label"
         />
 
     <TextView
@@ -80,7 +80,7 @@
         android:layout_alignBaseline="@id/label_plate"
         android:layout_below="@id/car_brand"
         android:layout_toRightOf="@id/label_plate"
-        style="@style/Widget.App.Text"
+        style="@style/TextAppearance.App.Body1"
 
         />
 
@@ -93,7 +93,7 @@
         android:layout_marginStart="8dp"
         android:text="@string/start_date"
         android:layout_below="@id/label_plate"
-        style="@style/Widget.App.Text.Label"
+        style="@style/TextAppearance.App.Text.Label"
         />
 
     <TextView
@@ -105,7 +105,7 @@
         android:layout_below="@id/car_plate"
         android:layout_alignBaseline="@id/label_start_date"
         android:layout_toRightOf="@id/label_start_date"
-        style="@style/Widget.App.Text"
+        style="@style/TextAppearance.App.Body1"
 
         />
 
@@ -117,7 +117,7 @@
         android:layout_marginStart="8dp"
         android:text="@string/end_date"
         android:layout_below="@id/label_start_date"
-        style="@style/Widget.App.Text.Label"
+        style="@style/TextAppearance.App.Text.Label"
         />
 
     <TextView
@@ -129,7 +129,7 @@
         android:layout_alignBaseline="@id/label_end_date"
         android:layout_below="@id/label_start_date"
         android:layout_toRightOf="@id/label_end_date"
-        style="@style/Widget.App.Text"
+        style="@style/TextAppearance.App.Body1"
         />
 
 

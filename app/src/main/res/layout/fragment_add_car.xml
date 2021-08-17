@@ -6,7 +6,7 @@
     tools:context=".views.fragments.addCarPage.AddCarFragment"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/bg_add_car_page">
+    android:background="@color/black">
     <View
         android:layout_width="300dp"
         android:layout_height="300dp"
