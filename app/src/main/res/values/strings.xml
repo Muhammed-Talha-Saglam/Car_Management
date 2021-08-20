@@ -31,4 +31,5 @@
     <string name="login_fail">Failed to login!</string>
     <string name="new_car_added">New car has been added successfully!</string>
     <string name="all_cars">All Cars</string>
+    <string name="take_car_picture"><u>Take Car Picture</u> </string>
 </resources>

@@ -36,12 +36,12 @@ abstract class CarRoomDatabase : RoomDatabase() {
             val dao = database.get().carDao()
 
             applicationScope.launch {
-                dao.insertCar(Car(brand = "Mercedes", plate = "34 aa 101"))
-                dao.insertCar(Car(brand = "Ford", plate = "34 bb 102"))
-                dao.insertCar(Car(brand = "Porsche", plate = "34 cc 103"))
-                dao.insertCar(Car(brand = "Volkswagen", plate = "34 dd 104"))
-                dao.insertCar(Car(brand = "Fiat", plate = "34 ee 105"))
-
+//                dao.insertCar(Car(brand = "Mercedes", plate = "34 aa 101"))
+//                dao.insertCar(Car(brand = "Ford", plate = "34 bb 102"))
+//                dao.insertCar(Car(brand = "Porsche", plate = "34 cc 103"))
+//                dao.insertCar(Car(brand = "Volkswagen", plate = "34 dd 104"))
+//                dao.insertCar(Car(brand = "Fiat", plate = "34 ee 105"))
+//
 
                 dao.insertUser(User(userType = UserType.ADMIN,email = "admin@gmail.com",password = "admin"))
                 dao.insertUser(User(userType = UserType.STANDART,email = "user1@gmail.com",password = "user1"))

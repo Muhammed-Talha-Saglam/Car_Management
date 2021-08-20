@@ -37,6 +37,11 @@ fun LocalDateTime.toStringTime(): String {
     return "$hour : $minute"
 }
 
+fun  LocalDateTime.toStringDateAndTime(): String {
+    return this.toStringDate() + " " + this.toStringTime()
+}
+
+
 private fun getMonthFormat(month: Int): String {
 
     /*

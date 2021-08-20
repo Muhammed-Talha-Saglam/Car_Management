@@ -83,6 +83,12 @@ class CarListViewModel @ViewModelInject constructor(
         }
     }
 
+    fun deleteCar(car: Car) {
+        viewModelScope.launch {
+            carDao.deleteCar(car)
+        }
+    }
+
 
     fun makeNewReservation(
         brand: String,

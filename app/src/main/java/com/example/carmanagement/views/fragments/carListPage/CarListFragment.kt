@@ -13,6 +13,7 @@ import com.example.carmanagement.databinding.FragmentCarListBinding
 import com.example.carmanagement.model.Car
 import com.example.carmanagement.model.User
 import com.example.carmanagement.model.UserType
+import com.example.carmanagement.views.fragments.carListPage.CarsAdapter.OnItemClickListener
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.android.synthetic.main.fragment_car_list.*
 import java.time.LocalDateTime
@@ -20,7 +21,8 @@ import java.time.ZoneOffset
 
 
 @AndroidEntryPoint
-class CarListFragment : Fragment(R.layout.fragment_car_list), CarsAdapter.OnItemClickListener {
+class CarListFragment : Fragment(R.layout.fragment_car_list), OnItemClickListener {
+
 
     lateinit var binding: FragmentCarListBinding
 
@@ -46,7 +48,7 @@ class CarListFragment : Fragment(R.layout.fragment_car_list), CarsAdapter.OnItem
 
         binding = FragmentCarListBinding.bind(view)
 
-        val carAdapter = CarsAdapter(this, user.userType)
+        val carAdapter = CarsAdapter(this,user.userType)
 
 
         binding.apply {
@@ -115,25 +117,29 @@ class CarListFragment : Fragment(R.layout.fragment_car_list), CarsAdapter.OnItem
         Admin cannot reserve car for himself/herself
         */
         if (user.userType == UserType.ADMIN)
-            return
+        {
+            carListViewModel.deleteCar(car)
+        } else {
 
-        alertDialog = AlertDialog.Builder(requireActivity())
-        alertDialog.setMessage(getString(R.string.alert_message))
-        alertDialog.setNegativeButton(getString(R.string.no)) { dialog, _ ->
-            dialog.dismiss()
+            alertDialog = AlertDialog.Builder(requireActivity())
+            alertDialog.setMessage(getString(R.string.alert_message))
+            alertDialog.setNegativeButton(getString(R.string.no)) { dialog, _ ->
+                dialog.dismiss()
+            }
+            alertDialog.setPositiveButton(getString(R.string.yes)) { dialog, _ ->
+
+                carListViewModel.makeNewReservation(
+                    brand = car.brand,
+                    plate = car.plate,
+                    carId = car.carId,
+                    requireContext()
+                )
+
+                dialog.dismiss()
+            }
+                .show()
         }
-        alertDialog.setPositiveButton(getString(R.string.yes)) { dialog, _ ->
 
-            carListViewModel.makeNewReservation(
-                brand = car.brand,
-                plate = car.plate,
-                carId = car.carId,
-                requireContext()
-            )
-
-            dialog.dismiss()
-        }
-            .show()
     }
 
     private fun goToAddCarPage() {

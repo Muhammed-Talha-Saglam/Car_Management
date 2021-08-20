@@ -5,6 +5,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
+import com.example.carmanagement.constants.toStringDateAndTime
 import com.example.carmanagement.databinding.ItemUserHistoryBinding
 import com.example.carmanagement.model.UserHistory
 
@@ -19,8 +20,8 @@ class UserHistoryAdapter : ListAdapter<UserHistory, UserHistoryAdapter.UserHisto
             binding.apply {
                 carBrand.text = userHistory.brand
                 carPlate.text = userHistory.plate
-                startDate.text = userHistory.reservationStart.toLocalDate().toString()
-                endDate.text = userHistory.reservationsEnd.toLocalDate().toString()
+                startDate.text = userHistory.reservationStart.toStringDateAndTime()
+                endDate.text = userHistory.reservationsEnd.toStringDateAndTime()
             }
 
         }

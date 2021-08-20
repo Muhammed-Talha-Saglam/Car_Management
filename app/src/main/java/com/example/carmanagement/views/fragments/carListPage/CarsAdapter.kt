@@ -12,7 +12,7 @@ import com.example.carmanagement.model.Car
 import com.example.carmanagement.model.UserType
 
 class CarsAdapter(
-    private val listener: OnItemClickListener,
+    private val onItemClickListener: OnItemClickListener,
     private val userType: UserType
     ) : ListAdapter<Car, CarsAdapter.CarsViewHolder>(DiffCallback()) {
 
@@ -24,7 +24,7 @@ class CarsAdapter(
                     val position = adapterPosition
                     if(position != RecyclerView.NO_POSITION) {
                         Log.d("item",getItem(position).toString() )
-                        listener.onItemClick(getItem(position))
+                        onItemClickListener.onItemClick(getItem(position))
                     }
                 }
             }
@@ -34,11 +34,20 @@ class CarsAdapter(
             binding.apply {
                 carBrand.text = car.brand
                 carPlate.text = car.plate
+                carPic.setImageBitmap(car.image)
+                deleteCar.setOnClickListener {
+                    onItemClickListener.onItemClick(car)
+                }
+
+
                 /*
-                Admin cannot reserve car for himself/herself
+                Admin cannot reserve car for himself/herself.
                  */
                 if (userType == UserType.ADMIN){
                     textClickToReserve.visibility = View.GONE
+                } else {
+                    // Standard users cannot delete car.
+                    deleteCar.visibility = View.GONE
                 }
             }
 
@@ -67,4 +76,6 @@ class CarsAdapter(
         fun onItemClick(car: Car)
     }
 
+
 }
+

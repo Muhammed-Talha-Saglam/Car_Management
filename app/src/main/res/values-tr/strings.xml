@@ -32,5 +32,6 @@
     <string name="login_fail">Giriş Başarısız!</string>
     <string name="new_car_added">Yeni araç başarıyla eklendi!</string>
     <string name="all_cars">Araçlar</string>
+    <string name="take_car_picture"><u>Araba fotografını yükle</u></string>
 
 </resources>

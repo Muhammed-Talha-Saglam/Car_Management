@@ -1,5 +1,6 @@
 package com.example.carmanagement.model
 
+import android.graphics.Bitmap
 import androidx.room.Entity
 import androidx.room.PrimaryKey
 
@@ -12,5 +13,5 @@ data class Car(
 
     val brand: String,
     val plate: String,
-
+    val image: Bitmap
 )
