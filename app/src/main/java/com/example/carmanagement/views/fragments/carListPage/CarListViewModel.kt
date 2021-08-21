@@ -1,6 +1,7 @@
 package com.example.carmanagement.views.fragments.carListPage
 
 import android.content.Context
+import android.graphics.Bitmap
 import android.util.Log
 import android.widget.Toast
 import androidx.hilt.lifecycle.ViewModelInject
@@ -94,6 +95,7 @@ class CarListViewModel @ViewModelInject constructor(
         brand: String,
         plate: String,
         carId: Int,
+        carImage: Bitmap,
         context: Context
     ) {
 
@@ -110,6 +112,7 @@ class CarListViewModel @ViewModelInject constructor(
                 reservationsEnd = endLocalDateTime.value!!,
                 brand = brand,
                 plate = plate,
+                carImage = carImage,
                 userOwnerId = currentUser.value!!.userId
             )
             carDao.insertUserHistory(userHistory)

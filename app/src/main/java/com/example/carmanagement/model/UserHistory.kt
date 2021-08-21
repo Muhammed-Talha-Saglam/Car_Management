@@ -1,5 +1,6 @@
 package com.example.carmanagement.model
 
+import android.graphics.Bitmap
 import androidx.room.Entity
 import androidx.room.PrimaryKey
 import java.time.LocalDateTime
@@ -13,5 +14,6 @@ data class UserHistory(
     val reservationsEnd: LocalDateTime,
     val brand: String,
     val plate: String,
+    val carImage: Bitmap,
     val userOwnerId: Int
 )

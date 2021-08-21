@@ -132,6 +132,7 @@ class CarListFragment : Fragment(R.layout.fragment_car_list), OnItemClickListene
                     brand = car.brand,
                     plate = car.plate,
                     carId = car.carId,
+                    carImage = car.image,
                     requireContext()
                 )
 

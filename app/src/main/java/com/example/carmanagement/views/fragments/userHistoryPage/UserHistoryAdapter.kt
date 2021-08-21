@@ -18,10 +18,13 @@ class UserHistoryAdapter : ListAdapter<UserHistory, UserHistoryAdapter.UserHisto
         fun bind(userHistory: UserHistory) {
 
             binding.apply {
+                carPic.setImageBitmap(userHistory.carImage)
                 carBrand.text = userHistory.brand
                 carPlate.text = userHistory.plate
                 startDate.text = userHistory.reservationStart.toStringDateAndTime()
                 endDate.text = userHistory.reservationsEnd.toStringDateAndTime()
+
+
             }
 
         }
